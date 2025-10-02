@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: my-deploy
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+	  app: uber
+  template:
+    metadata:
+	  labels:
+	    app: uber
+	spec:
+	  containers:
+	    - name: cont-1
+		  image: praveen260/docker-k8s:uber
+		  ports:
+		    - containerPort: 3000
