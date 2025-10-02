@@ -17,4 +17,4 @@ spec:
         - name: cont-1
           image: praveen260/docker-k8s:uber
           ports:
-            - containerPort: 3000
+            - containerPort: 80
